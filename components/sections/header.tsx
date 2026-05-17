@@ -14,9 +14,13 @@ export default function Header() {
         { key: 'nav.about', href: '#about' },
         { key: 'nav.skills', href: '#skills' },
         { key: 'nav.experience', href: '#experience' },
+        { key: 'nav.education', href: '#education' },
         { key: 'nav.projects', href: '#projects' },
         { key: 'nav.contact', href: '#contact' },
     ];
+
+    const navLinkClassName = 'text-gray-400 hover:text-emerald-400 px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:bg-white/5';
+    const mobileLinkClassName = 'block px-5 py-3 text-sm font-medium text-gray-300 hover:text-emerald-400 hover:bg-white/5 transition-colors duration-200';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,60 +30,47 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const showBackground = scrolled || isMenuOpen;
+
     return (
-        <header className="fixed top-0 w-full z-50 backdrop-blur-md">
-            <div
-                className={`transition-[background-color] duration-300 ease-in-out ${scrolled ? 'bg-gray-900/95' : 'bg-gray-900/30'}`}
-                style={{
-                    borderBottom: scrolled ? '1px solid rgba(31, 41, 55, 0.5)' : 'none',
-                    boxShadow: scrolled ? '0 10px 15px -3px rgba(0, 0, 0, 0.1)' : 'none',
-                }}
-            >
-                <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="sticky top-0 z-50">
+            <div className={`transition-all duration-300 ${showBackground ? 'bg-[#0f172a]/90 backdrop-blur-md shadow-xl' : ''}`}>
+                <nav className="w-full px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex-shrink-0">
-                            <a href="#" className="text-xl font-bold text-white">
+                            <a href="#" className="text-xl font-bold gradient-text-emerald">
                                 JW
                             </a>
                         </div>
 
-                        <div className="hidden md:block">
-                            <div className="ml-10 flex items-baseline space-x-8">
-                                {navigation.map((item) => (
-                                    <a key={item.key} href={item.href} className="text-gray-300 hover:text-emerald-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
-                                        {t(item.key)}
-                                    </a>
-                                ))}
-                            </div>
+                        <div className="hidden md:flex items-center space-x-1">
+                            {navigation.map((item) => (
+                                <a key={item.key} href={item.href} className={navLinkClassName}>
+                                    {t(item.key)}
+                                </a>
+                            ))}
                         </div>
 
-                        <div className="flex items-center space-x-4">
+                        <div className="flex items-center gap-3">
                             <LanguageToggle />
-                            <div className="md:hidden">
-                                <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-300 hover:text-white p-2">
-                                    {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                                </button>
-                            </div>
+                            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-gray-300 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors duration-200">
+                                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                            </button>
                         </div>
                     </div>
-
-                    {isMenuOpen && (
-                        <div className="md:hidden">
-                            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800/95 rounded-lg mt-2 mb-2">
-                                {navigation.map((item) => (
-                                    <a
-                                        key={item.key}
-                                        href={item.href}
-                                        className="text-gray-300 hover:text-emerald-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        {t(item.key)}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    )}
                 </nav>
+            </div>
+
+            <div className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="px-4 pb-4">
+                    <div className="bg-[#0f172a]/95 backdrop-blur-md border border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden">
+                        {navigation.map((item) => (
+                            <a key={item.key} href={item.href} className={mobileLinkClassName} onClick={() => setIsMenuOpen(false)}>
+                                {t(item.key)}
+                            </a>
+                        ))}
+                    </div>
+                </div>
             </div>
         </header>
     );

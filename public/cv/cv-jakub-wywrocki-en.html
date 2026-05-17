@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jakub Wywrocki - CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --ink: #0f172a;
+            --muted: #475569;
+            --emerald: #10b981;
+            --emerald-dark: #0f766e;
+            --line: #e2e8f0;
+            --bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+        }
+
+        .page {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 28px 32px 36px;
+        }
+
+        .header {
+            display: grid;
+            gap: 16px;
+            border-radius: 16px;
+            background: #ffffff;
+            color: var(--ink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 12px;
+        }
+
+        .header-top {
+            display: grid;
+            gap: 4px;
+        }
+
+        .header-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 16px;
+            align-items: start;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--emerald-dark);
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-item:hover {
+            color: var(--emerald-dark);
+        }
+
+        .contact-item span {
+            line-height: 1.4;
+        }
+
+        .contact-item svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .section {
+            margin-top: 18px;
+            padding-top: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .section:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--emerald-dark);
+            margin-bottom: 8px;
+        }
+
+        .summary {
+            margin: 0;
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.45;
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1.2fr 0.8fr;
+        }
+
+        .role {
+            display: grid;
+            gap: 6px;
+        }
+
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .role-title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .role-meta {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .role-company {
+            font-size: 12px;
+            color: var(--emerald-dark);
+            font-weight: 600;
+        }
+
+        .role-list {
+            margin: 6px 0 0 14px;
+            padding: 0;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.45;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .chip {
+            padding: 4px 8px;
+            border-radius: 999px;
+            font-size: 10px;
+            font-weight: 600;
+            background: transparent;
+            color: var(--emerald-dark);
+            border: 1px solid #cbd5f5;
+        }
+
+        .list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .list h4 {
+            margin: 0;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+        }
+
+        .list p {
+            margin: 0;
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .education {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .education strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 10px;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm;
+            }
+
+            body {
+                background: #ffffff;
+            }
+
+            .page {
+                padding: 0;
+            }
+
+            .header {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-top">
+                    <div class="name">Jakub Wywrocki</div>
+                    <div class="title">Full-Stack Developer - Backend-focused, Microservices & Integrations</div>
+                </div>
+                <div class="header-grid">
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10Z"></path>
+                                <circle cx="12" cy="11" r="2"></circle>
+                            </svg>
+                            <span>Kielce, Poland / Remote</span>
+                        </div>
+                        <a class="contact-item" href="mailto:jaqb1991@gmail.com">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                <path d="m3 7 9 6 9-6"></path>
+                            </svg>
+                            <span>jaqb1991@gmail.com</span>
+                        </a>
+                        <a class="contact-item" href="https://jaqb.dev">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"></path>
+                                <path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"></path>
+                            </svg>
+                            <span>jaqb.dev</span>
+                        </a>
+                        <a class="contact-item" href="https://github.com/jwywrocki">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"></path>
+                                <path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"></path>
+                            </svg>
+                            <span>github.com/jwywrocki</span>
+                        </a>
+                        <a class="contact-item" href="https://www.linkedin.com/in/jwywrocki">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"></path>
+                                <path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"></path>
+                            </svg>
+                            <span>linkedin.com/in/jwywrocki</span>
+                        </a>
+                    </div>
+                    <p class="summary">
+                        Hi! I'm a backend-focused Full-Stack Developer with over 4 years of experience shaping
+                        e-commerce platforms. Instead of just writing code, I focus on building solutions that drive
+                        real business value. I design microservices, connect stores with external platforms (like
+                        Baselinker and Synerise), integrate seamless payment flows (such as BLIK or PayPal), and set up
+                        analytics (GTM, GA4) to help teams understand their users.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section class="section grid">
+            <div class="list">
+                <div class="section-title">Experience</div>
+                <div class="role">
+                    <div class="role-header">
+                        <div class="role-title">Full-Stack Developer</div>
+                        <div class="role-meta">2024 - Present</div>
+                    </div>
+                    <div class="role-company">D9 · Remote</div>
+                    <ul class="role-list">
+                        <li>Designing and developing microservices to seamlessly connect e-commerce platforms with
+                            external APIs.</li>
+                        <li>Taking ownership of checkout and payment integrations, as well as social authentication
+                            implementation.</li>
+                        <li>Setting up and configuring analytics tools (GTM, GA4, Clarity) to provide actionable
+                            insights into user behavior.</li>
+                        <li>Ensuring system stability and performance through effective CI/CD pipelines and Dockerized
+                            environments.</li>
+                    </ul>
+                </div>
+                <div class="role">
+                    <div class="role-header">
+                        <div class="role-title">Junior Developer</div>
+                        <div class="role-meta">2022 - 2024</div>
+                    </div>
+                    <div class="role-company">SZOPEX DUTKIEWICZ Sp. z o. o., Sp. K. · Remote</div>
+                    <ul class="role-list">
+                        <li>Co-developed and maintained e-commerce platforms with a strong focus on performance,
+                            external integrations, and responsive UI.</li>
+                        <li>Collaborated closely with product and design teams to build and maintain long-term features
+                            across multiple regions.</li>
+                        <li>Supported API integrations and database optimizations to keep high-traffic stores running
+                            smoothly.</li>
+                    </ul>
+                </div>
+                <div class="role">
+                    <div class="role-header">
+                        <div class="role-title">Junior Developer</div>
+                        <div class="role-meta">2020</div>
+                    </div>
+                    <div class="role-company">Primeo · Kielce, PL</div>
+                    <ul class="role-list">
+                        <li>Created responsive websites and CMS-based applications for local clients.</li>
+                        <li>Focused on writing clean code, SEO best practices, and ensuring a high-quality frontend
+                            experience.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list">
+                <div class="section-title">Skills</div>
+                <h4>Core</h4>
+                <p>Laravel, PHP, TypeScript, JavaScript, React, Next.js, Vue.js</p>
+                <h4>Data & Infra</h4>
+                <p>PostgreSQL, MySQL, Redis, MongoDB, RabbitMQ, Elasticsearch, Supabase</p>
+                <h4>Integrations</h4>
+                <p>eCDP, Synerise, Baselinker, Miinto, Trustmate</p>
+                <h4>Payments</h4>
+                <p>BLIK, PayU, Tpay, PayPal, PayPo, InPost Pay, GiftPay</p>
+                <h4>Analytics</h4>
+                <p>GTM, GA4, Microsoft Clarity</p>
+                <h4>Workflow</h4>
+                <p>Git, Docker, CI/CD, GitHub, GitLab, Jira, Slack, Figma, Adobe XD</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Selected Integrations</div>
+            <div class="chips">
+                <span class="chip">BLIK</span>
+                <span class="chip">PayU</span>
+                <span class="chip">Tpay</span>
+                <span class="chip">PayPal</span>
+                <span class="chip">PayPo</span>
+                <span class="chip">InPost Pay</span>
+                <span class="chip">GiftPay</span>
+                <span class="chip">eCDP</span>
+                <span class="chip">Synerise</span>
+                <span class="chip">Baselinker</span>
+                <span class="chip">Miinto</span>
+                <span class="chip">Trustmate</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Education</div>
+            <div class="education">
+                <span><strong>Bachelor's in Computer Engineering</strong> · Jan Kochanowski University of Kielce</span>
+                <span>2017 - 2021</span>
+            </div>
+        </section>
+
+        <div class="footer">References available on request</div>
+    </div>
+</body>
+
+</html>

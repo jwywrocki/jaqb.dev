@@ -17,6 +17,7 @@ const translations = {
         'nav.about': 'About',
         'nav.skills': 'Skills',
         'nav.experience': 'Experience',
+        'nav.education': 'Education',
         'nav.projects': 'Projects',
         'nav.contact': 'Contact',
 
@@ -24,19 +25,25 @@ const translations = {
         'hero.greeting': "Hi, I'm",
         'hero.name': 'Jakub Wywrocki',
         'hero.title': 'Full-Stack Developer',
-        'hero.subtitle': 'I craft exceptional digital experiences',
-        'hero.description': 'Specialized in building scalable web applications and microservices with over 3 years of experience in modern technologies.',
+        'hero.subtitle': 'Microservices & integrations for e-commerce',
+        'hero.description':
+            'Building solutions that drive real business value. Backend-focused e-commerce developer specializing in secure microservices, seamless integrations, and effective checkout flows.',
         'hero.cta': 'Get In Touch',
         'hero.resume': 'View Resume',
+        'hero.highlight.experience': '4+ years in e-commerce',
+        'hero.highlight.location': 'Remote',
+        'hero.highlight.stack': 'Microservices & integrations',
 
         // About
         'about.title': 'About Me',
-        'about.text1': "I'm a passionate full-stack developer with over three years of experience specializing in building microservices and creating, maintaining, and evolving e-commerce platforms.",
+        'about.text1':
+            "Hi! I'm a backend-focused Full-Stack Developer with over 4 years of experience shaping e-commerce platforms. Instead of just writing code, I focus on building solutions that drive real business value.",
         'about.text2':
-            'My journey in web development started with a curiosity about how things work behind the scenes. Today, I focus on writing clean, efficient code and creating user-centered digital experiences.',
-        'about.text3': "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities.",
+            'I design microservices, connect stores with external platforms (like Baselinker and Synerise), integrate seamless payment flows (such as BLIK or PayPal), and set up analytics (GTM, GA4) to help teams understand their users.',
+        'about.text3':
+            'Daily stack: Laravel/PHP, JS/TS, React, occasional Vue; data: PostgreSQL, MySQL, MongoDB, Redis, RabbitMQ, Supabase, Elasticsearch; analytics: GTM, GA4, Microsoft Clarity; workflow: Git, GitHub, GitLab, Docker, CI/CD, Jira, Slack; design: Figma, Adobe XD.',
         'about.experience': 'Experience',
-        'about.experience.years': '3+ years',
+        'about.experience.years': '4+ years',
         'about.education': 'Education',
         'about.education.degree': 'BS in CS',
         'about.technologies': 'Technologies',
@@ -49,10 +56,17 @@ const translations = {
         'skills.technologies': 'Technologies',
         'skills.frameworks': 'Frameworks',
         'skills.databasesAndApis': 'Databases & APIs',
+        'skills.integrations': 'Integrations & Payments',
 
         // Experience
         'experience.title': 'Experience',
         'experience.present': 'Present',
+
+        // Education
+        'education.title': 'Education',
+        'education.degree': "Bachelor's in Computer Engineering",
+        'education.institution': 'Jan Kochanowski University of Kielce',
+        'education.year': '2017 - 2021',
 
         // Projects
         'projects.title': 'Featured Projects',
@@ -66,7 +80,7 @@ const translations = {
         'contact.email.label': 'Email',
         'contact.email': 'jaqb1991@gmail.com',
         'contact.location.label': 'Location',
-        'contact.location': 'Kielce, Poland',
+        'contact.location': 'Kielce, Poland / Remote',
         'contact.follow': 'Follow me on social media',
         'contact.name.label': 'Name',
         'contact.name.placeholder': 'Name',
@@ -74,12 +88,17 @@ const translations = {
         'contact.message.label': 'Message',
         'contact.message.placeholder': 'Your message...',
         'contact.send': 'Send Message',
+        'contact.sending': 'Sending...',
+        'contact.success': 'Message sent! I will get back to you soon.',
+        'contact.error': 'Something went wrong. Please try again.',
+        'contact.rateLimit': 'Please wait a moment before sending another message.',
     },
     pl: {
         // Navigation
         'nav.about': 'O mnie',
         'nav.skills': 'Umiejętności',
         'nav.experience': 'Doświadczenie',
+        'nav.education': 'Edukacja',
         'nav.projects': 'Projekty',
         'nav.contact': 'Kontakt',
 
@@ -87,20 +106,24 @@ const translations = {
         'hero.greeting': 'Cześć, nazywam się',
         'hero.name': 'Jakub Wywrocki',
         'hero.title': 'Full-Stack Developer',
-        'hero.subtitle': 'Tworzę wyjątkowe doświadczenia cyfrowe',
-        'hero.description': 'Specjalizuję się w budowaniu skalowalnych aplikacji internetowych i mikrousług z ponad 3-letnim doświadczeniem w nowoczesnych technologiach.',
+        'hero.subtitle': 'Mikrousługi i integracje dla e-commerce',
+        'hero.description': 'Buduję rozwiązania, które napędzają biznes. Backendowy developer e-commerce specjalizujący się w mikrousługach, integracjach i płynnych procesach zakupowych.',
         'hero.cta': 'Skontaktuj się',
         'hero.resume': 'Zobacz CV',
+        'hero.highlight.experience': '4+ lata w e-commerce',
+        'hero.highlight.location': 'Zdalnie',
+        'hero.highlight.stack': 'Mikrousługi i integracje',
 
         // About
         'about.title': 'O mnie',
         'about.text1':
-            'Jestem pasjonatem full-stack developmentu z ponad trzyletnim doświadczeniem w specjalizacji w budowaniu mikrousług oraz tworzeniu, utrzymywaniu i rozwijaniu platform e-commerce.',
+            'Cześć! Jestem Full-Stack Developerem z głównym naciskiem na backend. Od ponad 4 lat pomagam rozwijać platformy e-commerce. Zamiast tylko pisać kod, skupiam się na budowaniu rozwiązań, które napędzają biznes.',
         'about.text2':
-            'Moja podróż w web developmencie rozpoczęła się od ciekawości, jak rzeczy działają za kulisami. Dziś skupiam się na pisaniu czystego, wydajnego kodu i tworzeniu doświadczeń cyfrowych zorientowanych na użytkownika.',
-        'about.text3': 'Kiedy nie koduję, można mnie znaleźć eksplorującego nowe technologie, przyczyniającego się do projektów open-source lub cieszącego się aktywnościami na świeżym powietrzu.',
+            'Projektuję mikroserwisy, integruję sklepy z systemami zewnętrznymi (m.in. Baselinker, Synerise), wdrażam bezproblemowe płatności (BLIK, PayU i inne) oraz podpinam analitykę (GTM, GA4), która pozwala lepiej zrozumieć ruch na stronie.',
+        'about.text3':
+            'Na co dzień: Laravel/PHP, JS/TS, React, okazjonalnie Vue; dane: PostgreSQL, MySQL, MongoDB, Redis, RabbitMQ, Supabase, Elasticsearch; analityka: GTM, GA4, Microsoft Clarity; workflow: Git, GitHub, GitLab, Docker, CI/CD, Jira, Slack; design: Figma, Adobe XD.',
         'about.experience': 'Doświadczenie',
-        'about.experience.years': 'Ponad 3 lata',
+        'about.experience.years': 'Ponad 4 lata',
         'about.education': 'Edukacja',
         'about.education.degree': 'Inżynier',
         'about.technologies': 'Technologie',
@@ -113,10 +136,17 @@ const translations = {
         'skills.technologies': 'Technologie',
         'skills.frameworks': 'Frameworki',
         'skills.databasesAndApis': 'Bazy Danych i API',
+        'skills.integrations': 'Integracje i Płatności',
 
         // Experience
         'experience.title': 'Doświadczenie',
         'experience.present': 'Obecnie',
+
+        // Education
+        'education.title': 'Edukacja',
+        'education.degree': 'Inżynier Informatyki',
+        'education.institution': 'Uniwersytet Jana Kochanowskiego w Kielcach',
+        'education.year': '2017 - 2021',
 
         // Projects
         'projects.title': 'Wybrane Projekty',
@@ -131,7 +161,7 @@ const translations = {
         'contact.email.label': 'Email',
         'contact.email': 'jaqb1991@gmail.com',
         'contact.location.label': 'Lokalizacja',
-        'contact.location': 'Kielce, Polska',
+        'contact.location': 'Kielce, Polska / Zdalnie',
         'contact.follow': 'Śledź mnie w mediach społecznościowych',
         'contact.name.label': 'Imię',
         'contact.name.placeholder': 'Imię',
@@ -139,6 +169,10 @@ const translations = {
         'contact.message.label': 'Wiadomość',
         'contact.message.placeholder': 'Twoja wiadomość...',
         'contact.send': 'Wyślij Wiadomość',
+        'contact.sending': 'Wysyłanie...',
+        'contact.success': 'Wiadomość wysłana! Odezwę się najszybciej jak to możliwe.',
+        'contact.error': 'Coś poszło nie tak. Spróbuj ponownie.',
+        'contact.rateLimit': 'Poczekaj chwilę przed wysłaniem kolejnej wiadomości.',
     },
 };
 

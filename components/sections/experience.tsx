@@ -8,70 +8,77 @@ export default function Experience() {
 
     const experiences = [
         {
-            period: `2024 — ${t('experience.present')}`,
+            key: 'd9',
+            period: `2024 - ${t('experience.present')}`,
             title: 'Full-Stack Developer',
             company: 'D9',
             location: 'Remote',
             description:
-                'Designing, developing, and maintaining scalable microservices in a high-traffic e-commerce ecosystem (100k+ users). Integrated third-party services, optimized backend performance, and contributed to frontend refactors using modern frameworks.',
+                'Designing and developing microservices to seamlessly connect e-commerce platforms with external APIs. Taking ownership of checkout flows, social authentication, and setting up analytics tools (GTM, GA4) to provide actionable insights. Ensuring system stability through effective CI/CD pipelines and Dockerized environments.',
             technologies: ['Laravel', 'JavaScript', 'Vue.js', 'Docker', 'MySQL', 'RabbitMQ', 'Redis', 'PostgreSQL', 'React', 'C#'],
         },
         {
-            period: `2022 — 2024`,
+            key: 'szopex',
+            period: '2022 - 2024',
             title: 'Junior Developer',
             company: 'SZOPEX DUTKIEWICZ Sp. z o. o., Sp. K.',
             location: 'Remote',
             description:
-                'Participated in the development and support of e-commerce platforms. Worked closely with designers to deliver pixel-perfect, responsive UIs. Assisted in API integration, database optimization, and cross-team collaboration on long-term projects.',
+                'Co-developed and maintained e-commerce platforms with a strong focus on performance, external integrations, and responsive UI. Collaborated closely with product and design teams to build and maintain long-term features across multiple regions.',
             technologies: ['Laravel', 'JavaScript', 'Vue.js', 'Docker', 'MySQL', 'RabbitMQ', 'Redis'],
         },
         {
-            period: '2020 — 2020',
+            key: 'primeo',
+            period: '2020',
             title: 'Junior Developer',
             company: 'Primeo',
             location: 'Kielce, PL',
             description:
-                'Created responsive websites and CMS-based applications for local clients. Focused on clean code, SEO best practices, and learned team workflows using Git and modern dev tools.',
+                'Created responsive websites and CMS-based applications for local clients. Focused on writing clean code, SEO best practices, and ensuring a high-quality frontend experience.',
             technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
         },
     ];
 
     return (
-        <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-            <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-white mb-4">{t('experience.title')}</h2>
-                    <div className="w-24 h-1 bg-emerald-400 mx-auto"></div>
+        <section id="experience" className="section section-clipped">
+            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute top-1/2 left-0 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl"></div>
+            </div>
+
+            <div className="section-container-narrow">
+                <div className="section-header">
+                    <h2 className="section-title">{t('experience.title')}</h2>
+                    <div className="section-divider mx-auto"></div>
                 </div>
 
                 <div className="relative">
-                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-400 to-blue-500"></div>
+                    <div className="absolute left-0 top-3 bottom-3 w-px bg-gradient-to-b from-emerald-500/60 via-indigo-500/30 to-transparent"></div>
 
-                    <div className="space-y-12">
-                        {experiences.map((exp, index) => (
-                            <div key={index} className="relative flex items-start">
-                                <div className="absolute left-6 w-4 h-4 bg-emerald-400 rounded-full border-4 border-gray-900"></div>
-                                <div className="ml-20 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-emerald-400/50 transition-all duration-300 w-full">
-                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <div className="space-y-6">
+                        {experiences.map((exp) => (
+                            <div key={exp.key} className="relative pl-8">
+                                <div className="absolute left-[-4px] top-4 w-2 h-2 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></div>
+                                <div className="glass-card rounded-2xl p-6">
+                                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                                            <p className="text-emerald-400 font-medium">{exp.company}</p>
+                                            <h3 className="text-base font-semibold text-white">{exp.title}</h3>
+                                            <p className="text-sm text-emerald-400 font-medium">{exp.company}</p>
                                         </div>
-                                        <div className="flex flex-col sm:items-end mt-2 sm:mt-0">
-                                            <div className="flex items-center text-gray-400 text-sm mb-1">
-                                                <Calendar className="w-4 h-4 mr-1" />
+                                        <div className="flex flex-col sm:items-end gap-1 flex-shrink-0">
+                                            <div className="flex items-center gap-1.5 text-gray-500 text-xs">
+                                                <Calendar className="w-3.5 h-3.5" />
                                                 {exp.period}
                                             </div>
-                                            <div className="flex items-center text-gray-400 text-sm">
-                                                <MapPin className="w-4 h-4 mr-1" />
+                                            <div className="flex items-center gap-1.5 text-gray-500 text-xs">
+                                                <MapPin className="w-3.5 h-3.5" />
                                                 {exp.location}
                                             </div>
                                         </div>
                                     </div>
-                                    <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
-                                    <div className="flex flex-wrap gap-2">
+                                    <p className="text-sm text-gray-400 mb-4 leading-relaxed">{exp.description}</p>
+                                    <div className="flex flex-wrap gap-1.5">
                                         {exp.technologies.map((tech) => (
-                                            <span key={tech} className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm border border-emerald-500/30">
+                                            <span key={tech} className="px-2.5 py-0.5 text-xs font-medium bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">
                                                 {tech}
                                             </span>
                                         ))}

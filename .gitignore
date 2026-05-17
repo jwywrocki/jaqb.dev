@@ -22,3 +22,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/public/cv/cv-jakub-wywrocki-en-full.html
+/public/cv/cv-jakub-wywrocki-en-full.pdf
+/public/cv/cv-jakub-wywrocki-pl-full.html
+/public/cv/cv-jakub-wywrocki-pl-full.pdf
