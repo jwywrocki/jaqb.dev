@@ -30,6 +30,7 @@ const translations = {
             'Building solutions that drive real business value. Backend-focused e-commerce developer specializing in secure microservices, seamless integrations, and effective checkout flows.',
         'hero.cta': 'Get In Touch',
         'hero.resume': 'View Resume',
+        'hero.availability': 'Available for work',
         'hero.highlight.experience': '4+ years in e-commerce',
         'hero.highlight.location': 'Remote',
         'hero.highlight.stack': 'Microservices & integrations',
@@ -56,7 +57,7 @@ const translations = {
         'skills.technologies': 'Technologies',
         'skills.frameworks': 'Frameworks',
         'skills.databasesAndApis': 'Databases & APIs',
-        'skills.integrations': 'Integrations & Payments',
+        'skills.integrations': 'Integrations',
 
         // Experience
         'experience.title': 'Experience',
@@ -110,6 +111,7 @@ const translations = {
         'hero.description': 'Buduję rozwiązania, które napędzają biznes. Backendowy developer e-commerce specjalizujący się w mikrousługach, integracjach i płynnych procesach zakupowych.',
         'hero.cta': 'Skontaktuj się',
         'hero.resume': 'Zobacz CV',
+        'hero.availability': 'Dostępny do pracy',
         'hero.highlight.experience': '4+ lata w e-commerce',
         'hero.highlight.location': 'Zdalnie',
         'hero.highlight.stack': 'Mikrousługi i integracje',
@@ -136,7 +138,7 @@ const translations = {
         'skills.technologies': 'Technologie',
         'skills.frameworks': 'Frameworki',
         'skills.databasesAndApis': 'Bazy Danych i API',
-        'skills.integrations': 'Integracje i Płatności',
+        'skills.integrations': 'Integracje',
 
         // Experience
         'experience.title': 'Doświadczenie',

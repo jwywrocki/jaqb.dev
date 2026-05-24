@@ -7,7 +7,8 @@ import Image from 'next/image';
 export default function Hero() {
     const { t, language } = useLanguage();
 
-    const resumeHref = language === 'pl' ? '/cv/cv-pl.pdf' : '/cv/cv-en.pdf';
+    const resumeFile = language === 'pl' ? 'cv-jakub-wywrocki-pl.pdf' : 'cv-jakub-wywrocki-en.pdf';
+    const resumeHref = `/cv/${resumeFile}`;
 
     const highlights = [
         { icon: Briefcase, label: t('hero.highlight.experience') },
@@ -69,7 +70,7 @@ export default function Hero() {
                             </div>
                             <div className="absolute -top-3 -right-3 glass rounded-2xl px-3 py-2 text-xs font-medium text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
                                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                                Available for work
+                                {t('hero.availability')}
                             </div>
                             <div className="absolute -bottom-3 -left-3 glass rounded-2xl px-3 py-2 text-xs font-medium text-gray-300 flex items-center gap-1.5">
                                 <Code2 className="w-3.5 h-3.5 text-indigo-400" />
