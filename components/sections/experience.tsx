@@ -10,31 +10,28 @@ export default function Experience() {
         {
             key: 'd9',
             period: `2024 - ${t('experience.present')}`,
-            title: 'Full-Stack Developer',
+            title: t('experience.d9.title'),
             company: 'D9',
-            location: 'Remote',
-            description:
-                'Designing and developing microservices to seamlessly connect e-commerce platforms with external APIs. Taking ownership of checkout flows, social authentication, and setting up analytics tools (GTM, GA4) to provide actionable insights. Ensuring system stability through effective CI/CD pipelines and Dockerized environments.',
+            location: t('experience.d9.location'),
+            description: t('experience.d9.description'),
             technologies: ['Laravel', 'JavaScript', 'Vue.js', 'Docker', 'MySQL', 'RabbitMQ', 'Redis', 'PostgreSQL', 'React', 'C#'],
         },
         {
             key: 'szopex',
             period: '2022 - 2024',
-            title: 'Junior Developer',
+            title: t('experience.szopex.title'),
             company: 'SZOPEX DUTKIEWICZ Sp. z o. o., Sp. K.',
-            location: 'Remote',
-            description:
-                'Co-developed and maintained e-commerce platforms with a strong focus on performance, external integrations, and responsive UI. Collaborated closely with product and design teams to build and maintain long-term features across multiple regions.',
+            location: t('experience.szopex.location'),
+            description: t('experience.szopex.description'),
             technologies: ['Laravel', 'JavaScript', 'Vue.js', 'Docker', 'MySQL', 'RabbitMQ', 'Redis'],
         },
         {
             key: 'primeo',
             period: '2020',
-            title: 'Junior Developer',
+            title: t('experience.primeo.title'),
             company: 'Primeo',
-            location: 'Kielce, PL',
-            description:
-                'Created responsive websites and CMS-based applications for local clients. Focused on writing clean code, SEO best practices, and ensuring a high-quality frontend experience.',
+            location: t('experience.primeo.location'),
+            description: t('experience.primeo.description'),
             technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
         },
     ];

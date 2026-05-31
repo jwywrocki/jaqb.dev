@@ -62,6 +62,18 @@ const translations = {
         // Experience
         'experience.title': 'Experience',
         'experience.present': 'Present',
+        'experience.d9.title': 'Full-Stack Developer',
+        'experience.d9.location': 'Remote',
+        'experience.d9.description':
+            'Designing and developing microservices to seamlessly connect e-commerce platforms with external APIs. Taking ownership of checkout flows, social authentication, and setting up analytics tools (GTM, GA4) to provide actionable insights. Ensuring system stability through effective CI/CD pipelines and Dockerized environments.',
+        'experience.szopex.title': 'Junior Developer',
+        'experience.szopex.location': 'Remote',
+        'experience.szopex.description':
+            'Co-developed and maintained e-commerce platforms with a strong focus on performance, external integrations, and responsive UI. Collaborated closely with product and design teams to build and maintain long-term features across multiple regions.',
+        'experience.primeo.title': 'Junior Developer',
+        'experience.primeo.location': 'Kielce, PL',
+        'experience.primeo.description':
+            'Created responsive websites and CMS-based applications for local clients. Focused on writing clean code, SEO best practices, and ensuring a high-quality frontend experience.',
 
         // Education
         'education.title': 'Education',
@@ -112,7 +124,7 @@ const translations = {
         'hero.description': 'Buduję rozwiązania, które napędzają biznes. Backendowy developer e-commerce specjalizujący się w mikrousługach, integracjach i płynnych procesach zakupowych.',
         'hero.cta': 'Skontaktuj się',
         'hero.resume': 'Zobacz CV',
-        'hero.availability': 'Dostępny do pracy',
+        'hero.availability': 'Dostępny',
         'hero.highlight.experience': '4+ lata w e-commerce',
         'hero.highlight.location': 'Zdalnie',
         'hero.highlight.stack': 'Mikrousługi i integracje',
@@ -144,6 +156,18 @@ const translations = {
         // Experience
         'experience.title': 'Doświadczenie',
         'experience.present': 'Obecnie',
+        'experience.d9.title': 'Full-Stack Developer',
+        'experience.d9.location': 'Zdalnie',
+        'experience.d9.description':
+            'Projektowanie i rozwijanie mikrousług łączących platformy e-commerce z zewnętrznymi API. Odpowiedzialność za checkout, logowanie społecznościowe oraz wdrożenia analityki (GTM, GA4) dostarczającej użytecznych danych. Dbanie o stabilność systemów poprzez skuteczne CI/CD i środowiska Docker.',
+        'experience.szopex.title': 'Junior Developer',
+        'experience.szopex.location': 'Zdalnie',
+        'experience.szopex.description':
+            'Współtworzenie i utrzymanie platform e-commerce z naciskiem na wydajność, integracje zewnętrzne i responsywne UI. Ścisła współpraca z zespołami produktu i designu przy długoterminowych funkcjach dla wielu rynków.',
+        'experience.primeo.title': 'Junior Developer',
+        'experience.primeo.location': 'Kielce, Polska',
+        'experience.primeo.description':
+            'Tworzenie responsywnych stron i aplikacji CMS dla lokalnych klientów. Nacisk na czysty kod, dobre praktyki SEO i wysoką jakość doświadczenia frontendowego.',
 
         // Education
         'education.title': 'Edukacja',
