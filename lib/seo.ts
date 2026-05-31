@@ -49,7 +49,7 @@ const localeMetadata: Record<Locale, LocaleMeta> = {
             'PHP',
             'React',
             'TypeScript',
-            'mikrousługi',
+            'mikroserwisy',
             'integracje e-commerce',
             'integracje płatności',
             'zdalnie',
