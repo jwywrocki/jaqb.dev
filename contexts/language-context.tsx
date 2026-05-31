@@ -120,14 +120,14 @@ const translations = {
         'hero.greeting': 'Cześć, nazywam się',
         'hero.name': 'Jakub Wywrocki',
         'hero.title': 'Full-Stack Developer',
-        'hero.subtitle': 'Mikrousługi i integracje dla e-commerce',
-        'hero.description': 'Buduję rozwiązania, które napędzają biznes. Backendowy developer e-commerce specjalizujący się w mikrousługach, integracjach i płynnych procesach zakupowych.',
+        'hero.subtitle': 'Mikroserwisy i integracje dla e-commerce',
+        'hero.description': 'Buduję rozwiązania, które napędzają biznes. Backendowy developer e-commerce specjalizujący się w mikroserwisach, integracjach i płynnych procesach zakupowych.',
         'hero.cta': 'Skontaktuj się',
         'hero.resume': 'Zobacz CV',
         'hero.availability': 'Dostępny',
         'hero.highlight.experience': '4+ lata w e-commerce',
         'hero.highlight.location': 'Zdalnie',
-        'hero.highlight.stack': 'Mikrousługi i integracje',
+        'hero.highlight.stack': 'Mikroserwisy i integracje',
 
         // About
         'about.title': 'O mnie',
@@ -159,15 +159,14 @@ const translations = {
         'experience.d9.title': 'Full-Stack Developer',
         'experience.d9.location': 'Zdalnie',
         'experience.d9.description':
-            'Projektowanie i rozwijanie mikrousług łączących platformy e-commerce z zewnętrznymi API. Odpowiedzialność za checkout, logowanie społecznościowe oraz wdrożenia analityki (GTM, GA4) dostarczającej użytecznych danych. Dbanie o stabilność systemów poprzez skuteczne CI/CD i środowiska Docker.',
+            'Projektowanie i rozwijanie mikroserwisów łączących platformy e-commerce z zewnętrznymi API. Odpowiedzialność za checkout, logowanie społecznościowe oraz wdrożenia analityki (GTM, GA4) dostarczającej użytecznych danych. Dbanie o stabilność systemów poprzez skuteczne CI/CD i środowiska Docker.',
         'experience.szopex.title': 'Junior Developer',
         'experience.szopex.location': 'Zdalnie',
         'experience.szopex.description':
             'Współtworzenie i utrzymanie platform e-commerce z naciskiem na wydajność, integracje zewnętrzne i responsywne UI. Ścisła współpraca z zespołami produktu i designu przy długoterminowych funkcjach dla wielu rynków.',
         'experience.primeo.title': 'Junior Developer',
         'experience.primeo.location': 'Kielce, Polska',
-        'experience.primeo.description':
-            'Tworzenie responsywnych stron i aplikacji CMS dla lokalnych klientów. Nacisk na czysty kod, dobre praktyki SEO i wysoką jakość doświadczenia frontendowego.',
+        'experience.primeo.description': 'Tworzenie responsywnych stron i aplikacji CMS dla lokalnych klientów. Nacisk na czysty kod, dobre praktyki SEO i wysoką jakość doświadczenia frontendowego.',
 
         // Education
         'education.title': 'Edukacja',
