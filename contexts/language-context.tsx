@@ -1,9 +1,9 @@
 'use client';
 
 import type React from 'react';
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
-type Language = 'en' | 'pl';
+export type Language = 'en' | 'pl';
 
 interface LanguageContextType {
     language: Language;
@@ -71,6 +71,7 @@ const translations = {
 
         // Projects
         'projects.title': 'Featured Projects',
+        'projects.description1': 'A modern clinic app with a lightweight CMS for self-managed content updates. Fast, responsive, and focused on team-friendly workflows.',
         'projects.viewLive': 'View Live',
         'projects.viewCode': 'View Code',
 
@@ -152,7 +153,7 @@ const translations = {
 
         // Projects
         'projects.title': 'Wybrane Projekty',
-        'projects.description1': 'A clinic app with lightweight CMS for content updates.',
+        'projects.description1': 'Nowoczesna aplikacja dla kliniki z lekkim CMS-em do samodzielnej aktualizacji treści. Szybka, responsywna i nastawiona na wygodę obsługi zespołu.',
         'projects.viewLive': 'Zobacz Live',
         'projects.viewCode': 'Zobacz Kod',
 
@@ -180,8 +181,17 @@ const translations = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-    const [language, setLanguage] = useState<Language>('en');
+interface LanguageProviderProps {
+    children: React.ReactNode;
+    initialLanguage: Language;
+}
+
+export function LanguageProvider({ children, initialLanguage }: LanguageProviderProps) {
+    const [language, setLanguage] = useState<Language>(initialLanguage);
+
+    useEffect(() => {
+        setLanguage(initialLanguage);
+    }, [initialLanguage]);
 
     const t = (key: string): string => {
         return translations[language][key as keyof (typeof translations)['en']] || key;

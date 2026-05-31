@@ -1,22 +1,22 @@
 import type React from 'react';
-import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import { Inter } from 'next/font/google';
-import './globals.css';
 import Header from '@/components/sections/header';
-import { LanguageProvider } from '@/contexts/language-context';
+import { LanguageProvider, type Language } from '@/contexts/language-context';
+import { defaultLocale, isLocale } from '../lib/seo';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-    title: 'Jakub Wywrocki | Full-Stack Developer',
-    description: 'Portfolio of Jakub Wywrocki, a full-stack developer with over three years of experience',
-};
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+    const requestHeaders = await headers();
+    const headerLocale = requestHeaders.get('x-locale') ?? '';
+    const locale = isLocale(headerLocale) ? headerLocale : defaultLocale;
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+        <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
             <body className={inter.className} suppressHydrationWarning>
-                <LanguageProvider>
+                <LanguageProvider initialLanguage={locale as Language}>
                     <Header />
                     {children}
                 </LanguageProvider>

@@ -11,7 +11,7 @@ export default function Projects() {
         {
             key: 'clinic',
             title: 'Clinic App',
-            description: 'A clinic app with lightweight CMS for content updates.',
+            description: t('projects.description1'),
             image: '/projects/clinic.png?height=300&width=400',
             technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'PostgreSQL'],
             github: 'https://github.com',
